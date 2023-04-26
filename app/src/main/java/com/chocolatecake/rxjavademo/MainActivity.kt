@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToSecond() {
         startActivity(Intent(this, SecondActivity::class.java))
-//        Log.d(TAG, "navigateToSecond: ")
+        Log.d(TAG, "navigateToSecond: ")
     }
 
     private fun decreaseCounter() {

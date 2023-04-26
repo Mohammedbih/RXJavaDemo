@@ -22,7 +22,10 @@ class SecondActivity : AppCompatActivity() {
         RxBus.listen(RxBusEvent.CounterEvent::class.java)
             .subscribe { binding.textViewCounter.text = it.number.toString() }
             .add(compositeDisposable)
+        binding.buttonBack.setOnClickListener { navigateBack() }
     }
+
+    private fun navigateBack() { finish() }
 
     override fun onDestroy() {
         compositeDisposable.dispose()
